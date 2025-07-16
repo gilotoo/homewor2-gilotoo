@@ -1,0 +1,80 @@
+
+homework 2
+homework 2_
+First off, you need to open this notebook in Google Colab. This time, you will need to download this notebook and upload it to your Google Drive. Once it's in your Google Drive, you can open it with Google Colab.
+
+HW2 : Pine Trees
+I would like you to channel your inner Bob Ross and write a python program that draws ASCII art pine trees. Your program should prompt the user to input the height of the tree they would like. Then it should draw a tree to the output area beneath your code. The tree should be made of astrix (*) . It should have a trunk visible at the bottom of the tree from the pipe symbol (|).
+
+An example run would look like below:
+
+
+[ ]
+'''
+How tall should the tree be? 10
+          *
+         ***
+        *****
+       *******
+      *********
+     ***********
+    *************
+   ***************
+
+
+Here's another example with a shorter tree:
+
+
+[ ]
+'''
+How tall should the tree be? 4
+    *
+   ***
+  *****
+ *******
+    |
+'''
+
+Here are some hints:
+You will use the print function.
+I want you to use the print function to print only a single character at a time.
+For example, you should use print("*", end="") or print(" ", end="").
+In order to get this program to work, you will need to use for loops.
+
+You will write more than one for loop.
+You will prompt the user to specify a length by asking "How tall should the tree be?"
+
+The user shoud be able to enter their answer on the same line as the question.
+After entering their answer, the tree should be drawn to the output area.
+
+[1]
+2s
+# Prompt for tree height
+user_input = input("How tall should the tree be?: ")
+height = int(user_input)
+#looping through each row
+for x in range(height):
+#whitespacing betweeen astrick (center)
+  for k in range(height-x-1):
+    print(" ", end="")
+#asterick numbering in each line
+  for y in range(1, 2*x + 2):
+    print("*", end="")
+  print("")
+#tree trunk
+for t in range(height-1):
+  print(" ", end="")
+print("|")
+How tall should the tree be?: 10
+         *
+        ***
+       *****
+      *******
+     *********
+    ***********
+   *************
+  ***************
+ *****************
+*******************
+         |
+Colab paid products - Cancel contracts here
